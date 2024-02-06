@@ -1,0 +1,65 @@
+/* Atsisiusto fonto importavimas*/
+@font-face {
+    font-family: SuperFunky;
+    src: url(../font/SuperFunky.ttf);
+}
+/*Nuresetinami puslapio automatiniai formatavimo nustatymai*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* formuojamas puslapio stilius */
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden; /*panaikina scolinima*/
+    }
+
+    h1 {
+        font-family: "SuperFunky";
+        font-size: 8vw;
+        text-align: center; /*textas per viduri*/
+        padding: 15px; /*texto atitraukimas is visu pusiu*/
+    }
+
+footer {
+    font-family: "SuperFunky";
+        font-size: 1vw;
+        text-align: center; /*textas per viduri*/
+        padding: 15px 10px; /*texto atitraukimas is sonu ir is virsaus ir apacios*/
+        background-color: rgb(44, 48, 33);
+}
+
+ul {
+    list-style: none;/*panaikinami taskeliai prie nuotrauku*/
+    display: flex; /**/
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+}
+li {
+    height: 20vh; /*saraso suskaidymas po visa ekrana*/
+    flex-grow: 1;
+}
+li:hover {
+     z-index: 1; /*trecioji asis z- img iskils virs kitu*/
+}
+li:last-child { /*footerio tvarkymas?*/
+    flex-grow: 0;
+}
+img { /*paveiksliuko tvarkymas*/
+max-height: 100%; /*maximalus aukstis*/
+min-height: 100%; /*minimalus plotis*/
+object-fit: cover ; /*proporcijos paveikslelio*/
+filter: grayscale(100%) brightness(75%);
+transition: all 0.2s; /*0.2 s laiko trunka perejimas*/
+}
+
+/*efektai, dinamikos papildymas*/
+img:hover {
+    filter: grayscale(0%) brightness(100%);
+    transform: scale(1.1);
+    box-shadow: 0 0 50px 10px black; /*img seselio parametrai*/
+}
+
