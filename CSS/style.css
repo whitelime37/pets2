@@ -11,7 +11,7 @@
 }
 /* formuojamas puslapio stilius */
 body {
-    background-color: black;
+    background-color: rgb(156, 20, 20);
     color: white;
     overflow-x: hidden; /*panaikina scolinima*/
     }
